@@ -1,0 +1,16 @@
+<!-- views/post.handlebars -->
+{{!< layouts/main}} <h1>{{ post.title }}</h1>
+  <p>{{ post.content }}</p>
+
+  <h2>Comments</h2>
+  <ul>
+    {{#each post.Comments}}
+    <li>{{ this.content }}</li>
+    {{/each}}
+  </ul>
+
+  <form action="/add-comment/{{ post.id }}" method="post">
+    <label for="content">Add a Comment:</label>
+    <textarea id="content" name="content" required></textarea>
+    <button type="submit">Submit Comment</button>
+  </form>

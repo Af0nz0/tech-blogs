@@ -1,0 +1,29 @@
+<!-- views/layouts/main.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" href="./public/styles/styles.css" type="text/css
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if user}}
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+      {{else}}
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+      {{/if}}
+    </nav>
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+</body>
+<script
+</html>
